@@ -6,8 +6,13 @@ let cuotaTotal;
 const calculoInteres = () => {
     let monto = Number(document.getElementById("monto").value)
     let interes = Number(document.getElementById("interes").value)
+    let cuotas = Number(document.getElementById("cuotas").value)
+    
+    if( monto != "" && monto > 0 && !isNaN(monto) && typeof monto != "string" && cuotas != "" && cuotas > 0 && !isNaN(cuotas) && typeof cuotas != "string" && interes != "" && interes > 0 && !isNaN(interes) && typeof interes != "string"){
+    
     interesTotal =(monto * (interes/ 100))
     calculoCuotaTotal()
+}
 }
 
 botonCalcular.addEventListener("click", calculoInteres)
